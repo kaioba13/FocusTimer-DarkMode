@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #323238;
+  --dark-primary-color: #ffffff;
+  --bgdarkmode-color: #c4c4cc;
+  --activedark-color: #0a3442;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.range {
+  -webkit-appearance: none;
+  width: 90px;
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 9999px;
+  position: relative;
+  top: -35px;
+}
+
+.range::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 0px;
+  z-index: 0px;
+}
+.selectedrange {
+  background: var(--dark-primary-color);
+  transition: 700ms;
+}
+
+.selectedrange::-moz-range-thumb {
+  background: var(--dark-primary-color);
+  transition: 700ms;
+}
+
+.selected svg path {
+  fill: #02799d;
+  transition: 700ms;
+}
+
+.selected svg path:last-child {
+  fill: #ffffff;
+  transition: 700ms;
+}
+
+.conteudo {
+  margin: 196px 0 196px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "A B" "C B";
+  align-items: center;
+  justify-items: center;
+}
+
+.timer {
+  grid-area: A;
+}
+.options {
+  grid-area: B;
+}
+.controls {
+  grid-area: C;
+}
+
+.timer span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 7.875rem;
+  line-height: 9.25rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #323238;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.controls img {
+  max-width: 100%;
+}
+
+.controls button {
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.options {
+  max-width: 308px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 32px;
+  text-align: center;
+}
+
+.options button {
+  max-width: 100%;
+  position: relative;
+
+  background: #e1e1e6;
+  border-radius: 24px;
+  border: 0px;
+
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+    grid-template-areas: "A" "B" "C";
+    gap: 60px;
+    padding: 30px;
+  }
+
+  .options img {
+    max-width: 100%;
+  }
+  .timer span {
+    font-size: 6.5rem;
+  }
+  .timer {
+    grid-area: A;
+  }
+  .options {
+    grid-area: C;
+  }
+  .controls {
+    grid-area: B;
+  }
+}
+
+@media (max-width: 330px) {
+  .timer span {
+    font-size: 5rem;
+  }
+}

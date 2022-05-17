@@ -1,0 +1,15 @@
+header {
+  max-width: 1200px;
+}
+
+.lightmode {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
+
+.darkmode {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}

@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+span,
+button {
+  margin: 0px;
+  padding: 0px;
+}
+
+.hide {
+  display: none;
+}
