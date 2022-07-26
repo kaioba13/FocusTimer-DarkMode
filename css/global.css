@@ -1,15 +1,171 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-span,
-button {
-  margin: 0px;
-  padding: 0px;
+:root {
+  font-size: 62.5%;
 }
 
 .hide {
   display: none;
+}
+
+.content-timer button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 32px;
+}
+
+nav {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 20rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.timer {
+  font-size: 12.8rem;
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttonSounds {
+  height: 15.2rem;
+  width: 13.8rem;
+  background-color: #e1e1e6;
+  border-radius: 2.4rem;
+}
+
+.buttonSounds svg path {
+  fill: black;
+}
+
+.buttonSoundsActive,
+.buttonSoundsActive svg path {
+  background-color: #02799d;
+  fill: #ffffff;
+  transition: 0.5s;
+}
+
+footer {
+  padding-top: 10rem;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: #02799d;
+}
+
+.controls svg:hover path {
+  fill: #02799d;
+}
+
+.cards button:hover {
+  background-color: #02799d;
+  transition: 0.5s;
+}
+
+.cards button:hover svg path {
+  fill: #fff;
+  transition: 0.5s;
+}
+
+.dark-theme {
+  background: #000000;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.dark-theme .buttonSounds,
+.dark-theme .buttonSounds svg path {
+  background-color: #29292e;
+  fill: #ffffff;
+  transition: 0.5s;
+}
+
+.dark-theme .buttonSoundsActive,
+.buttonSoundsActive svg path {
+  background-color: #02799d;
+}
+
+.dark-theme .content-timer svg path {
+  fill: #ffffff;
+}
+
+.dark-theme .controls svg:hover path {
+  fill: #02799d;
+}
+
+@media (max-width: 700px) {
+  nav {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  main {
+    padding-top: 10rem;
+    gap: 5rem;
+    display: block;
+  }
+
+  .timer {
+    justify-content: center;
+  }
+
+  .controls {
+    padding: 2rem 0 2rem 0;
+    justify-content: center;
+  }
+
+  .cards {
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "A B"
+      "C D";
+    gap: 2rem;
+    max-width: 32rem;
+  }
+
+  footer {
+    padding-top: 5rem;
+  }
 }
